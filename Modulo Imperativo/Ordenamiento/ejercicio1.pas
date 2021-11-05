@@ -31,7 +31,7 @@ var
 begin
     dimlog:= 0;
     leer_oficina(oficina);
-    while(oficina.codigo_identificacion <> -1) do begin
+    while (oficina.codigo_identificacion <> -1) and (dimlog < CANT_OFICINAS) do begin
         dimlog := dimlog + 1;
         oficinas[dimlog] := oficina;
         leer_oficina(oficina);
@@ -78,6 +78,8 @@ begin
     leer_oficinas(oficinas, dimlog); {cargar vector de oficinas}
     ordenamiento_seleccion(oficinas, dimlog); {ordenamiento por método de selección }
     ordenamiento_insercion(oficinas, dimlog); {ordenamiento por método de insercion }
+    
+    writeln('Presione una tecla cualquiera para finalizar');
     readln;
     readln;
 end.
