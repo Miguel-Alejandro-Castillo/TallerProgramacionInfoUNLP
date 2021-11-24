@@ -46,8 +46,6 @@ robots
     {limpia la bolsa}
     depositarFlores
     posInicial(avInicial, caInicial)
-    Informar(avInicial)
-    Informar(caInicial)
     repetir 5
       Random(av, 1, 5)
       Random(ca,1, 10)
